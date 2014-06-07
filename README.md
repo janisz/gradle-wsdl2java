@@ -43,3 +43,5 @@ wsdl2java {
 |verbose           | `boolean`             | Indicate if comments during the code generation process will be displayed                       |
 
 ## License
+
+Code released under [the Apache License v. 2](https://raw.githubusercontent.com/janisz/gradle-wsdl2java/master/LICENSE)
