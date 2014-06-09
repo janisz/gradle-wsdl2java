@@ -1,6 +1,6 @@
 apply plugin: 'groovy'
 apply plugin: 'idea'
-apply plugin: 'maven'
+apply from: 'publish.gradle'
 
 defaultTasks 'clean', 'build'
 
@@ -17,42 +17,4 @@ dependencies {
     compile 'javax.mail:mail:1.4'
     compile gradleApi()
     groovy localGroovy()
-}
-
-task createPom << {
-    pom
-    {
-        project {
-            name 'Gradle wsdl2java plugin'
-            description 'The Gradle wsdl2java plugin makes it easy to generate Java source from WSDL'
-            url 'http://github.com/janisz/gradle-wsdl2java'
-            inceptionYear '2014'
-
-            scm {
-                developerConnection 'git@github.com:janisz/gradle-wsdl2java.git'
-                connection 'git://github.com/janisz/gradle-wsdl2java.git'
-                url 'https://github.com/janisz/gradle-wsdl2java.git'
-            }
-
-            licenses {
-                license {
-                    name 'The Apache Software License, Version 2.0'
-                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    distribution 'repo'
-                }
-            }
-
-            developers {
-                developer {
-                    id 'janisz'
-                    name 'Tomasz Janiszewski'
-                    email 'janiszt@gmail.com'
-                    roles {
-                        role 'Developer'
-                    }
-                    timezone '+1'
-                }
-            }
-        }
-    }.writeTo("pom.xml")
 }
