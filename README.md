@@ -42,6 +42,13 @@ wsdl2java {
 |namespaceToPackage| `Map<String, String>` | Dictionary that will translate namespaces from WSDL to taret class packages                     |
 |verbose           | `boolean`             | Indicate if comments during the code generation process will be displayed                       |
 
+### TODO
+
+* add support for multiple WSDLs (for now you can use [this file](https://gist.github.com/96e3bcb07c8d6f3d5ae5.git))
+* add AXIS dependecies to compile scope
+* fix Gradle 2.0 issues
+
+
 ## License
 
 Code released under [the Apache License v. 2](https://raw.githubusercontent.com/janisz/gradle-wsdl2java/master/LICENSE)
